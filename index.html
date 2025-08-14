@@ -38,27 +38,6 @@
       margin-top: 0.3rem;
     }
 
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
     /* Features */
     .features {
       max-width: 1000px;
@@ -123,13 +102,55 @@
       transition: max-height 0.3s ease;
     }
     .collapsible.open {
-      max-height: 1000px; /* large enough to show all */
+      max-height: 1000px;
     }
     .chevron {
       transition: transform 0.3s ease;
     }
     .chevron.rotate {
       transform: rotate(90deg);
+    }
+
+    /* Table styles */
+    .comparison {
+      max-width: 1000px;
+      margin: 2rem auto;
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .comparison th, .comparison td {
+      border: 1px solid #ddd;
+      padding: 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .comparison th {
+      background-color: #2a5d34;
+      color: #fff;
+    }
+    .comparison tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .comparison tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Orders section */
+    .orders {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+    .orders h2 {
+      color: #2a5d34;
+      margin-bottom: 1rem;
+    }
+    .orders p {
+      margin-bottom: 1rem;
     }
 
     /* Contact */
@@ -162,6 +183,76 @@
       background: #eee;
       color: #555;
     }
+
+    /* Table styles */
+  .comparison {
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .comparison th, .comparison td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .comparison th {
+    background-color: #2a5d34;
+    color: #fff;
+  }
+  .comparison tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .comparison tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Responsive table -> card layout on small screens */
+  @media (max-width: 768px) {
+    .comparison,
+    .comparison thead,
+    .comparison tbody,
+    .comparison th,
+    .comparison td,
+    .comparison tr {
+      display: block;
+      width: 100%;
+    }
+    .comparison thead {
+      display: none; /* Hide table header on mobile */
+    }
+    .comparison tr {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.8rem;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .comparison td {
+      border: none;
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 50%;
+      min-height: 1.4rem;
+    }
+    .comparison td:before {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.8rem;
+      width: 45%;
+      padding-right: 0.5rem;
+      white-space: normal;
+      font-weight: bold;
+      color: #2a5d34;
+    }
+    .comparison td:nth-of-type(1):before { content: "Feature"; }
+    .comparison td:nth-of-type(2):before { content: "Wright Collars"; }
+    .comparison td:nth-of-type(3):before { content: "Competitors"; }
+  }
   </style>
 </head>
 <body>
@@ -170,14 +261,6 @@
     <h1>Wright Wildlife Systems</h1>
     <p>World's most reliable wildlife tracking collars</p>
   </header>
-
-  <section class="gallery">
-    <img src="/images/Media.jpg" alt="Wildlife Collar">
-    <img src="/images/image.png" alt="Wildlife Collar in action">
-    <img src="https://via.placeholder.com/400x300?text=Bison+Collar+2" alt="Bison Collar 2">
-    <img src="https://via.placeholder.com/400x300?text=Bison+Collar+3" alt="Bison Collar 3">
-    <img src="https://via.placeholder.com/400x300?text=Bison+Collar+4" alt="Bison Collar 4">
-  </section>
 
   <section class="features">
     <h2>Collar Features</h2>
@@ -212,6 +295,75 @@
     </ul>
   </section>
 
+  <section>
+    <h2 style="text-align:center; color:#2a5d34;">Side-by-Side Comparison</h2>
+    <table class="comparison">
+      <tr>
+        <th>Feature</th>
+        <th>Wright Collars</th>
+        <th>Competitors</th>
+      </tr>
+      <tr>
+        <td>GPS & VHF</td>
+        <td>Completely independent systems, separate batteries/PCB</td>
+        <td>VHF and GPS share a single PCB, may not have independent batteries</td>
+      </tr>
+      <tr>
+        <td>Antennas</td>
+        <td>Dedicated GPS + Iridium antennas</td>
+        <td>Single shared multi-band antenna</td>
+      </tr>
+      <tr>
+        <td>Belting Strength</td>
+        <td>Reinforced industrial belting (4x stronger)</td>
+        <td>Biothane</td>
+      </tr>
+      <tr>
+        <td>Bolt Placement</td>
+        <td>Ergonomic – top position, easy bolting and better fitting</td>
+        <td>Under neck, often requires rotating the collar to bolt it</td>
+      </tr>
+      <tr>
+        <td>Sizing</td>
+        <td>One size fits all</td>
+        <td>Multiple sizes required for animals with variable neck size</td>
+      </tr>
+      <tr>
+        <td>Iridium System</td>
+        <td>High-voltage, strong signals, cold-weather optimized</td>
+        <td>Low-voltage, weaker signals, performance drop in cold</td>
+      </tr>
+      <tr>
+        <td>Communication</td>
+        <td>True 2-way, user-controlled schedule updates</td>
+        <td>Must contact manufacturer to change</td>
+      </tr>
+      <tr>
+        <td>Globalstar Option</td>
+        <td>Dual redundant devices + optional VHF</td>
+        <td>Single device, no redundancy</td>
+      </tr>
+      <tr>
+        <td>Lifespan</td>
+        <td>5 years</td>
+        <td>Typically 2-4 years</td>
+      </tr>
+      <tr>
+        <td>Tracking Frequency</td>
+        <td>Custom, high resolution (Iridium); 4/day with Globalstar redundancy</td>
+        <td>Lower frequency</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="orders">
+    <h2>Orders</h2>
+    <p>Our collars are highly customizable: Collar width, thickness, colour, number of batteries, and bolting pattern (round or tear drop) can all be customized at no added cost.</p>
+    <p>A Globalstar device can be added to an Iridium collar.</p>
+    <p>Pricing of Iridium and Globalstar collars varies significantly, with Globalstar collars costing about half of an Iridium.</p>
+    <p>Please send email to <a href="mailto:wrightwildlifesystems@gmail.com">wrightwildlifesystems@gmail.com</a> to inquire about ordering.</p>
+  </section>
+
   <section class="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:wrightwildlifesystems@gmail.com">wrightwildlifesystems@gmail.com</a></p>
@@ -235,3 +387,4 @@
 
 </body>
 </html>
+
