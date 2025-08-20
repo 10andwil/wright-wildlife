@@ -137,22 +137,10 @@
       background-color: #f1f1f1;
     }
 
-    /* Keep table scrollable on small screens with shadow hint */
+    /* Keep table scrollable on small screens */
     .table-wrapper {
       width: 100%;
       overflow-x: auto;
-      position: relative;
-    }
-    
-    .table-wrapper::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 30px;
-      height: 100%;
-      pointer-events: none;
-      background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
     }
 
     /* Orders section */
@@ -217,4 +205,123 @@
     <ul class="general collapsible open">
       <li><i class="fas fa-satellite-dish"></i>A single, robust GPS and VHF housing – no wires running through the collar.</li>
       <li><i class="fas fa-map-marker-alt"></i>Highly accurate GPS and reliable Iridium & Globalstar transmission, even when housing is under the neck.</li>
-      <li><i class="fas fa-broadcast-tower">
+      <li><i class="fas fa-broadcast-tower"></i>Completely independent VHF system with its own batteries and PCB – unmatched reliability.</li>
+      <li><i class="fas fa-wave-square"></i>Dual GPS and Iridium antennas for stronger, faster communication.</li>
+      <li><i class="fas fa-shield-alt"></i>Heavy-duty belting that is 4× stronger than competitors.</li>
+      <li><i class="fas fa-tools"></i>Ergonomic bolt placement at the top of the collar for better fit and no breakage.</li>
+      <li><i class="fas fa-arrows-alt-h"></i>One-size-fits-all design – only need the average neck size.</li>
+    </ul>
+
+    <h3 class="iridium">Iridium Collars (Powered by Xeos Technologies) <i class="fas fa-chevron-right chevron"></i></h3>
+    <ul class="iridium-list collapsible">
+      <li><i class="fas fa-bolt"></i>High-voltage system – superior performance and cold-weather reliability.</li>
+      <li><i class="fas fa-exchange-alt"></i>True 2-way communication – adjust GPS/Iridium schedules instantly without manufacturer contact.</li>
+      <li><i class="fas fa-signal"></i>Optional VHF integration.</li>
+      <li><i class="fas fa-clock"></i>Higher temporal resolution for precise tracking.</li>
+      <li><i class="fas fa-hourglass-half"></i>5-year lifespan.</li>
+    </ul>
+
+    <h3 class="globalstar">Globalstar Collars (Powered by GeoForce) <i class="fas fa-chevron-right chevron"></i></h3>
+    <ul class="globalstar-list collapsible">
+      <li><i class="fas fa-sync-alt"></i>Dual redundant devices – always one device facing skyward, even if collar rotates.</li>
+      <li><i class="fas fa-microchip"></i>Optional single-device configuration.</li>
+      <li><i class="fas fa-broadcast-tower"></i>Optional VHF integration.</li>
+      <li><i class="fas fa-history"></i>Reports location every 12 hours per device (4 daily with staggered scheduling).</li>
+      <li><i class="fas fa-feather-alt"></i>Lightweight, simple design with a 5-year lifespan.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 style="text-align:center; color:#2a5d34;">Side-by-Side Comparison</h2>
+    <div class="table-wrapper">
+      <table class="comparison">
+        <tr>
+          <th>Feature</th>
+          <th>Wright Collars</th>
+          <th>Competitors</th>
+        </tr>
+        <tr>
+          <td>GPS & VHF</td>
+          <td>Completely independent systems, separate batteries/PCB</td>
+          <td>VHF and GPS share a single PCB, may not have independent batteries</td>
+        </tr>
+        <tr>
+          <td>Antennas</td>
+          <td>Dedicated GPS + Iridium antennas</td>
+          <td>Single shared multi-band antenna</td>
+        </tr>
+        <tr>
+          <td>Belting Strength</td>
+          <td>Reinforced industrial belting (4x stronger)</td>
+          <td>Biothane</td>
+        </tr>
+        <tr>
+          <td>Bolt Placement</td>
+          <td>Ergonomic – top position, easy bolting and better fitting</td>
+          <td>Under neck, often requires rotating the collar to bolt it</td>
+        </tr>
+        <tr>
+          <td>Sizing</td>
+          <td>One size fits all</td>
+          <td>Multiple sizes required for animals with variable neck size</td>
+        </tr>
+        <tr>
+          <td>Iridium System</td>
+          <td>High-voltage, strong signals, cold-weather optimized</td>
+          <td>Low-voltage, weaker signals, performance drop in cold</td>
+        </tr>
+        <tr>
+          <td>Communication</td>
+          <td>True 2-way, user-controlled schedule updates</td>
+          <td>Must contact manufacturer to change</td>
+        </tr>
+        <tr>
+          <td>Globalstar Option</td>
+          <td>Dual redundant devices + optional VHF</td>
+          <td>Single device, no redundancy</td>
+        </tr>
+        <tr>
+          <td>Lifespan</td>
+          <td>5 years</td>
+          <td>Typically 2-4 years</td>
+        </tr>
+        <tr>
+          <td>Tracking Frequency</td>
+          <td>Custom, high resolution (Iridium); 4/day with Globalstar redundancy</td>
+          <td>Lower frequency</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="orders">
+    <h2>Orders</h2>
+    <p>Our collars are highly customizable: Collar width, thickness, colour, number of batteries, and bolting pattern (round or tear drop) can all be customized at no added cost.</p>
+    <p>A Globalstar device can be added to an Iridium collar.</p>
+    <p>Pricing of Iridium and Globalstar collars varies significantly, with Globalstar collars costing about half of an Iridium.</p>
+    <p>Please send email to <a href="mailto:wrightwildlifesystems@gmail.com">wrightwildlifesystems@gmail.com</a> to inquire about ordering.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:wrightwildlifesystems@gmail.com">wrightwildlifesystems@gmail.com</a></p>
+    <p>Phone: <a href="tel:+17809941993">+1 (780) 994-1993</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Wright Wildlife Systems
+  </footer>
+
+  <script>
+    document.querySelectorAll('.features h3').forEach(header => {
+      header.addEventListener('click', () => {
+        const list = header.nextElementSibling;
+        const chevron = header.querySelector('.chevron');
+        list.classList.toggle('open');
+        chevron.classList.toggle('rotate');
+      });
+    });
+  </script>
+
+</body>
+</html>
