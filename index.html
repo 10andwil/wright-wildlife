@@ -111,7 +111,7 @@
       transform: rotate(90deg);
     }
         
-    /* Table styles */
+      /* Table styles */
     .comparison {
       max-width: 1000px;
       margin: 2rem auto;
@@ -135,6 +135,12 @@
     }
     .comparison tr:hover {
       background-color: #f1f1f1;
+    }
+    
+    /* Keep table scrollable on small screens */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
     }
 
     /* Orders section */
@@ -294,66 +300,68 @@
     </ul>
   </section>
 
- <section>
-  <h2 style="text-align:center; color:#2a5d34;">Side-by-Side Comparison</h2>
-  <table class="comparison">
-    <tr>
-      <th>Feature</th>
-      <th>Wright Collars</th>
-      <th>Competitors</th>
-    </tr>
-    <tr>
-      <td data-label="Feature">GPS & VHF</td>
-      <td data-label="Wright Collars">Completely independent systems, separate batteries/PCB</td>
-      <td data-label="Competitors">VHF and GPS share a single PCB, may not have independent batteries</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Antennas</td>
-      <td data-label="Wright Collars">Dedicated GPS + Iridium antennas</td>
-      <td data-label="Competitors">Single shared multi-band antenna</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Belting Strength</td>
-      <td data-label="Wright Collars">Reinforced industrial belting (4x stronger)</td>
-      <td data-label="Competitors">Biothane</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Bolt Placement</td>
-      <td data-label="Wright Collars">Ergonomic – top position, easy bolting and better fitting</td>
-      <td data-label="Competitors">Under neck, often requires rotating the collar to bolt it</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Sizing</td>
-      <td data-label="Wright Collars">One size fits all</td>
-      <td data-label="Competitors">Multiple sizes required for animals with variable neck size</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Iridium System</td>
-      <td data-label="Wright Collars">High-voltage, strong signals, cold-weather optimized</td>
-      <td data-label="Competitors">Low-voltage, weaker signals, performance drop in cold</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Communication</td>
-      <td data-label="Wright Collars">True 2-way, user-controlled schedule updates</td>
-      <td data-label="Competitors">Must contact manufacturer to change</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Globalstar Option</td>
-      <td data-label="Wright Collars">Dual redundant devices + optional VHF</td>
-      <td data-label="Competitors">Single device, no redundancy</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Lifespan</td>
-      <td data-label="Wright Collars">5 years</td>
-      <td data-label="Competitors">Typically 2-4 years</td>
-    </tr>
-    <tr>
-      <td data-label="Feature">Tracking Frequency</td>
-      <td data-label="Wright Collars">Custom, high resolution (Iridium); 4/day with Globalstar redundancy</td>
-      <td data-label="Competitors">Lower frequency</td>
-    </tr>
-  </table>
-</section>
+  <section>
+    <h2 style="text-align:center; color:#2a5d34;">Side-by-Side Comparison</h2>
+    <div class="table-wrapper">
+      <table class="comparison">
+        <tr>
+          <th>Feature</th>
+          <th>Wright Collars</th>
+          <th>Competitors</th>
+        </tr>
+        <tr>
+          <td>GPS & VHF</td>
+          <td>Completely independent systems, separate batteries/PCB</td>
+          <td>VHF and GPS share a single PCB, may not have independent batteries</td>
+        </tr>
+        <tr>
+          <td>Antennas</td>
+          <td>Dedicated GPS + Iridium antennas</td>
+          <td>Single shared multi-band antenna</td>
+        </tr>
+        <tr>
+          <td>Belting Strength</td>
+          <td>Reinforced industrial belting (4x stronger)</td>
+          <td>Biothane</td>
+        </tr>
+        <tr>
+          <td>Bolt Placement</td>
+          <td>Ergonomic – top position, easy bolting and better fitting</td>
+          <td>Under neck, often requires rotating the collar to bolt it</td>
+        </tr>
+        <tr>
+          <td>Sizing</td>
+          <td>One size fits all</td>
+          <td>Multiple sizes required for animals with variable neck size</td>
+        </tr>
+        <tr>
+          <td>Iridium System</td>
+          <td>High-voltage, strong signals, cold-weather optimized</td>
+          <td>Low-voltage, weaker signals, performance drop in cold</td>
+        </tr>
+        <tr>
+          <td>Communication</td>
+          <td>True 2-way, user-controlled schedule updates</td>
+          <td>Must contact manufacturer to change</td>
+        </tr>
+        <tr>
+          <td>Globalstar Option</td>
+          <td>Dual redundant devices + optional VHF</td>
+          <td>Single device, no redundancy</td>
+        </tr>
+        <tr>
+          <td>Lifespan</td>
+          <td>5 years</td>
+          <td>Typically 2-4 years</td>
+        </tr>
+        <tr>
+          <td>Tracking Frequency</td>
+          <td>Custom, high resolution (Iridium); 4/day with Globalstar redundancy</td>
+          <td>Lower frequency</td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
   <section class="orders">
     <h2>Orders</h2>
