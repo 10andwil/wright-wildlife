@@ -110,7 +110,7 @@
     .chevron.rotate {
       transform: rotate(90deg);
     }
-
+        
     /* Table styles */
     .comparison {
       max-width: 1000px;
@@ -220,9 +220,10 @@
     .comparison tr {
       display: block;
       width: 100%;
+      box-sizing: border-box;
     }
     .comparison thead {
-      display: none; /* Hide table header on mobile */
+      display: none; /* Hide header on mobile */
     }
     .comparison tr {
       margin-bottom: 1rem;
@@ -230,29 +231,27 @@
       border-radius: 6px;
       padding: 0.8rem;
       background: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
     .comparison td {
       border: none;
-      padding: 0.5rem 0;
+      padding: 0.6rem 0 0.6rem 45%;
       position: relative;
-      padding-left: 50%;
-      min-height: 1.4rem;
+      text-align: left;
     }
     .comparison td:before {
       position: absolute;
-      top: 0.5rem;
+      top: 0;
       left: 0.8rem;
-      width: 45%;
+      width: 40%;
       padding-right: 0.5rem;
       white-space: normal;
       font-weight: bold;
       color: #2a5d34;
+      content: attr(data-label); /* dynamically use label */
     }
-    .comparison td:nth-of-type(1):before { content: "Feature"; }
-    .comparison td:nth-of-type(2):before { content: "Wright Collars"; }
-    .comparison td:nth-of-type(3):before { content: "Competitors"; }
   }
+
   </style>
 </head>
 <body>
