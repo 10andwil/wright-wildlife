@@ -201,13 +201,19 @@
     }
 
     /* Orders */
-    .orders {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #f9f9f9;
-      border-radius: 8px;
-    }
+   .orders {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;           /* keeps space inside background */
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+.orders h2 {
+  margin: 0 0 1rem 0;      /* top 0, bottom 1rem */
+}
+.orders p {
+  margin: 0.5rem 0;        /* equal top & bottom spacing for paragraphs */
+}
     .orders h2 {
     color: #000;                        /* black text */
     font-family: 'Playfair Display', serif; /* same as title */
