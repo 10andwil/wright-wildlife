@@ -122,19 +122,20 @@
     .features .globalstar-list li i { color: #e67e22; }
 
     /* Collapsible animation */
-    <ul class="general collapsible">
-    ...
-    </ul>
-
-    <!-- Iridium starts OPEN -->
-    <ul class="iridium-list collapsible open">
-    ...
-    </ul>
-
-    <!-- Globalstar starts OPEN -->
-    <ul class="globalstar-list collapsible open">
-    ...
-    </ul>
+      .collapsible {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+    }
+    .collapsible.open {
+      max-height: 1000px;
+    }
+    .chevron {
+      transition: transform 0.3s ease;
+    }
+    .chevron.rotate {
+      transform: rotate(90deg);
+    }
 
     /* Table styles */
     .comparison {
