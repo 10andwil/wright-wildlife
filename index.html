@@ -20,8 +20,12 @@
 
     /* Sticky header */
     header {
+      position: sticky;
+      top: 0;
+      background: white;
       text-align: center;
       border-bottom: 2px solid #e0e0e0;
+      z-index: 1000;
     }
     
     header h1 {
@@ -61,7 +65,7 @@
     /* ===== End Mission Statement ===== */
 
     /* Features */
-    .features {
+    .features h1 {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 2rem;
