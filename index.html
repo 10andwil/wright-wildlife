@@ -10,18 +10,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   
   <style>
-    body {
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #222;
   line-height: 1.5;
-
+}
   /* FULL-SCREEN FIXED BACKGROUND IMAGE */
-  background-image: url("./images/webbuffalo.jpg");
-  background-size: cover;        /* make it cover the screen */
-  background-position: center;   /* center it */
-  background-repeat: no-repeat;  /* don’t tile */
-  background-attachment: fixed;  /* stays in place while scrolling */
+ .background-hero {
+  position: fixed;        /* stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;            /* behind all content */
+  overflow: hidden;
+}
+.background-hero img {
+  width: 100%;            /* scale to container width */
+  height: auto;           /* keep aspect ratio */
+  opacity: 0.4;           /* makes image semi-transparent */
+  object-fit: cover;      /* cover entire container nicely */
 }
 
     /* Sticky header */
@@ -267,7 +276,12 @@
 </head>
 
 <body>
+   <div class="background-hero">
+    <img src="./images/webbuffalo.jpg" alt="Buffalo">
+  </div>
+  
  <div class="page-content">
+   
 <header>
   <h1>Wright Wildlife Systems</h1>
   <p>Precision-designed wildlife collars engineered to survive</p>
