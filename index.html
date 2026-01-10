@@ -160,17 +160,31 @@
       background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    .comparison th,
-    .comparison td {
-      border: 1px solid #ddd;
-      padding: 0.8rem;
-      text-align: left;
-      vertical-align: middle;
-      font-size: 1.2rem;                   /* same as features */
-      font-family: 'Inter', sans-serif;    /* match features */
-      font-weight: 500;
-      background-color: #2a5d34;
-      color: #fff;
+  .comparison th {               /* table subheadings */
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+  vertical-align: middle;
+
+  font-size: 1.2rem;               /* same as feature subheadings */
+  font-family: 'Inter', sans-serif; /* match features */
+  font-weight: 500;
+
+  background-color: #2a5d34;
+  color: #fff;
+}
+
+/* Table cells (td) stay normal */
+.comparison td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+  vertical-align: middle;
+  background-color: #fff;  /* or keep current style */
+  color: #222;             /* normal text color */
+  font-size: 1rem;         /* default size */
+  font-family: inherit;    /* inherit from page */
+  font-weight: normal;
     }
     .comparison tr {
       height: 4.5rem;
