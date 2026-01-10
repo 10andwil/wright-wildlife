@@ -47,13 +47,13 @@
     /* ===== Mission Statement (NEW) ===== */
     .mission {
       max-width: 900px;
-      margin: 2.5rem auto 2rem;
-      padding: 0 1.5rem;
+      margin: 2rem auto;        /* standardized top/bottom */
+      padding: 2rem 1.5rem;     /* top/bottom 2rem, sides 1.5rem */
       font-size: 1.05rem;
       color: #333;
     }
     .mission p {
-      margin-bottom: 1.2rem;
+      margin: 0.8rem 0;         /* equal top/bottom spacing for paragraphs */
     }
     .mission .quote {
       font-style: italic;
@@ -68,20 +68,20 @@
     .features {
       max-width: 1000px;
       margin: 2rem auto;
-      padding: 2rem;
+      padding: 2rem;           /* standardized padding top/bottom */
       background: #f9f9f9;
       border-radius: 8px;
     }
     .features h2 {                      /* changes "Collar Features" heading */
-    text-align: center;                 /* keep it centered */
-    color: #000;                        /* black text */
-    font-family: 'Playfair Display', serif; /* same as title */
-    font-size: 2rem;                    /* slightly larger */
-    font-weight: 600;                   /* matches title weight */
-     margin: 0 0 1rem 0;      /* top 0, bottom 1rem */
+      text-align: center;                 /* keep it centered */
+      color: #000;                        /* black text */
+      font-family: 'Playfair Display', serif; /* same as title */
+      font-size: 2rem;                    /* slightly larger */
+      font-weight: 600;                   /* matches title weight */
+      margin: 0 0 1rem 0;                 /* top 0, bottom 1rem */
     }
     .features h3 {
-      margin-top: 1.5rem;
+      margin: 0.6rem 0;                   /* standardized spacing */
       padding: 0.6rem 0.8rem;
       border-radius: 4px;
       cursor: pointer;
@@ -110,7 +110,7 @@
     .features ul {
       padding-left: 0;
       list-style: none;
-      margin-top: 0.5rem;
+      margin: 0.5rem 0;           /* standardized spacing */
     }
     .features li {
       margin-bottom: 0.7rem;
@@ -128,7 +128,7 @@
     .features .globalstar-list li i { color: #e67e22; }
 
     /* Collapsible animation */
-     .collapsible {
+    .collapsible {
       overflow: hidden;
       max-height: 0;
       transition: max-height 0.3s ease;
@@ -145,12 +145,12 @@
     
     /* Table styles */
     .comparison-title {                 /* change comparison title */
-    text-align: center;
-    color: #000;                       /* black text */
-    font-family: 'Playfair Display', serif; /* match title font */
-    font-size: 2rem;                    /* slightly larger */
-    font-weight: 600;                   /* semi-bold like title */
-    margin-bottom: 0.0rem;                /* spacing below heading */
+      text-align: center;
+      color: #000;                       /* black text */
+      font-family: 'Playfair Display', serif; /* match title font */
+      font-size: 2rem;                    /* slightly larger */
+      font-weight: 600;                   /* semi-bold like title */
+      margin-bottom: 0.5rem;              /* spacing below heading standardized */
     }
     .comparison {
       max-width: 1000px;
@@ -160,31 +160,29 @@
       background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-  .comparison th {               /* table subheadings */
-  border: 1px solid #ddd;
-  padding: 0.8rem;
-  text-align: center;
-  vertical-align: middle;
+    .comparison th {               /* table subheadings */
+      border: 1px solid #ddd;
+      padding: 0.6rem;             /* standardized padding */
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1.2rem;               /* same as feature subheadings */
+      font-family: 'Inter', sans-serif; /* match features */
+      font-weight: 500;
+      background-color: #f9f9f9;          /* same as features background */
+      color: #000;                         /* black text */
+    }
 
-  font-size: 1.2rem;               /* same as feature subheadings */
-  font-family: 'Inter', sans-serif; /* match features */
-  font-weight: 500;
-
-  background-color: #f9f9f9;          /* same as features background */
-  color: #000;                         /* black text */
-}
-
-/* Table cells (td) stay normal */
-.comparison td {
-  border: 1px solid #ddd;
-  padding: 0.6rem 0.8rem;
-  text-align: left;
-  vertical-align: middle;
-  background-color: #fff;  /* or keep current style */
-  color: #222;             /* normal text color */
-  font-size: 1rem;         /* default size */
-  font-family: inherit;    /* inherit from page */
-  font-weight: normal;
+    /* Table cells (td) stay normal */
+    .comparison td {
+      border: 1px solid #ddd;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: middle;
+      background-color: #fff;  /* or keep current style */
+      color: #222;             /* normal text color */
+      font-size: 1rem;         /* default size */
+      font-family: inherit;    /* inherit from page */
+      font-weight: normal;
     }
     .comparison tr {
       height: auto;
@@ -201,48 +199,44 @@
     }
 
     /* Orders */
-   .orders {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;           /* keeps space inside background */
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-.orders h2 {
-  margin: 0 0 1rem 0;      /* top 0, bottom 1rem */
-}
-.orders p {
-  margin: 0.5rem 0;        /* equal top & bottom spacing for paragraphs */
-}
+    .orders {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;           /* keeps space inside background */
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
     .orders h2 {
-    color: #000;                        /* black text */
-    font-family: 'Playfair Display', serif; /* same as title */
-    font-size: 2rem;                    /* slightly larger */
-    font-weight: 600;                   /* matches title weight */
-    margin-bottom: 1rem;     
+      color: #000;                        /* black text */
+      font-family: 'Playfair Display', serif; /* same as title */
+      font-size: 2rem;                    /* slightly larger */
+      font-weight: 600;                   /* matches title weight */
+      margin: 0 0 1rem 0;                 /* standardized spacing */
+    }
+    .orders p {
+      margin: 0.5rem 0;        /* equal top & bottom spacing for paragraphs */
     }
 
     /* Contact */
     .contact {
       background-color: #f8f8f8;
-      padding: 2rem;
+      padding: 2rem;             /* standardized padding */
       text-align: center;
       border-top: 2px solid #e0e0e0; /* same style as header's bottom border */
     }
     .contact h2 {
-    color: #000;                        /* black text */
-    font-family: 'Playfair Display', serif; /* same as title */
-    font-size: 2rem;                    /* slightly larger */
-    font-weight: 600;                   /* matches title weight */
-    margin-top: 0;       /* remove extra space above */
-    margin-bottom: 1rem; /* space below heading */    
+      color: #000;                        /* black text */
+      font-family: 'Playfair Display', serif; /* same as title */
+      font-size: 2rem;                    /* slightly larger */
+      font-weight: 600;                   /* matches title weight */
+      margin: 0 0 1rem 0;                  /* standardized spacing */
     }
-   .contact a {
-    color: #000;
-    text-decoration: none;
-    line-height: 1;  /* slightly tighter than normal */
-    display: block;      /* each link on its own line */
-    margin-bottom: 0.4rem;  /* optional gap between links */
+    .contact a {
+      color: #000;
+      text-decoration: none;
+      line-height: 1;  /* slightly tighter than normal */
+      display: block;      /* each link on its own line */
+      margin-bottom: 0.4rem;  /* optional gap between links */
     }
 
     /* Footer */
