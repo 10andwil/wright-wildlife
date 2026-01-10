@@ -351,12 +351,26 @@
 </footer>
 
 <script>
-  document.querySelectorAll('.features h3').forEach(header => {
-    header.addEventListener('click', () => {
-      const list = header.nextElementSibling;
-      const chevron = header.querySelector('.chevron');
-      list.classList.toggle('open');
-      chevron.classList.toggle('rotate');
+  document.addEventListener('DOMContentLoaded', () => {
+    // Force General Features closed
+    const generalList = document.querySelector('.general.collapsible');
+    if (generalList) generalList.classList.remove('open');
+
+    // Make sure Iridium and Globalstar remain open
+    const iridiumList = document.querySelector('.iridium-list.collapsible');
+    if (iridiumList) iridiumList.classList.add('open');
+
+    const globalstarList = document.querySelector('.globalstar-list.collapsible');
+    if (globalstarList) globalstarList.classList.add('open');
+
+    // Toggle behavior on click
+    document.querySelectorAll('.features h3').forEach(header => {
+      header.addEventListener('click', () => {
+        const list = header.nextElementSibling;
+        const chevron = header.querySelector('.chevron');
+        list.classList.toggle('open');
+        chevron.classList.toggle('rotate');
+      });
     });
   });
 </script>
