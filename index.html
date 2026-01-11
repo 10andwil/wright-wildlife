@@ -227,6 +227,35 @@ body {
       overflow-x: auto;
     }
 
+
+    /* COLLAR PHOTOS */
+.collar-photos {
+  display: flex;               /* side-by-side layout */
+  justify-content: center;     /* center the whole row */
+  gap: 2rem;                   /* space between photos */
+  margin: 3rem 0;              /* space above/below section */
+  flex-wrap: wrap;             /* wrap on smaller screens */
+}
+
+.collar-photos .photo-item {
+  text-align: center;          /* center heading below image */
+  max-width: 250px;            /* controls size of each photo box */
+}
+
+.collar-photos .photo-item img {
+  width: 100%;                 /* image fills photo box */
+  height: auto;                /* keeps aspect ratio */
+  border-radius: 8px;          /* optional rounded corners */
+  margin-bottom: 0.5rem;       /* space between image and heading */
+}
+
+.collar-photos .photo-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+    
     /* Orders */
     .orders {
       max-width: 1000px;
@@ -363,6 +392,26 @@ body {
   </ul>
 </section>
 
+
+   
+   <!-- ===== COLLAR PHOTOS ===== -->
+<section class="collar-photos">
+  <div class="photo-item">
+  <img src="./images/Copilot collar 1 c.png" alt="Iridum Collar">
+  <h3>Iridum</h3>
+  </div>
+  <div class="photo-item">
+    <img src="./images/Copilot collar 2 b.png" alt="Iridum Collar">
+    <h3>Iridum</h3>
+  </div>
+  <div class="photo-item">
+    <img src="./images/Copilot collar 3 z.png" alt="Globalstar Collar">
+    <h3>Globalstar</h3>
+  </div>
+</section>
+
+
+   
 <!-- ===== ORIGINAL TABLE (RESTORED) ===== -->
 <section>
   <h2 class="comparison-title">Side-by-Side Comparison</h2>
